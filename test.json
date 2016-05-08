@@ -1,0 +1,80 @@
+{
+    "responseHeader": {
+        "status": 0,
+        "QTime": 69,
+        "params": {
+            "q": "Where can i find details about retirement plans",
+            "fl": "id,body,bibliography",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 7,
+        "start": 0,
+        "docs": [
+            {
+                "id": "6",
+                "bibliography": [
+                    "https://www.tiaa.org/public/offer/services/my-retirement"
+                ],
+                "body": [
+                    "Retirement Planning"
+                ]
+            },
+            {
+                "id": "3",
+                "bibliography": [
+                    "https://www.tiaa.org/public/offer/products/retirement-plans"
+                ],
+                "body": [
+                    "Retirement Plans"
+                ]
+            },
+            {
+                "id": "4",
+                "bibliography": [
+                    "https://www.tiaa.org/public/offer/products/iras"
+                ],
+                "body": [
+                    "IRAs"
+                ]
+            },
+            {
+                "id": "12",
+                "bibliography": [
+                    "https://publictools.tiaa-cref.org/public/authentication/registration"
+                ],
+                "body": [
+                    "I forgot my password"
+                ]
+            },
+            {
+                "id": "13",
+                "bibliography": [
+                    "https://publictools.tiaa-cref.org/public/authentication/registration"
+                ],
+                "body": [
+                    "I forgot my username"
+                ]
+            },
+            {
+                "id": "14",
+                "bibliography": [
+                    "https://publictools.tiaa-cref.org/public/authentication/registration"
+                ],
+                "body": [
+                    "I think I've been hacked"
+                ]
+            },
+            {
+                "id": "10",
+                "bibliography": [
+                    "https://www.tiaa.org/public/offer/insights/tools-calculators"
+                ],
+                "body": [
+                    "Brokerage"
+                ]
+            }
+        ]
+    }
+}
