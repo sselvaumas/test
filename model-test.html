@@ -1,0 +1,26 @@
+<table class="table modeltable">
+    <tr>
+        <td><h4>Name : {{model.name}}</h4></td>
+        <td></td>
+    </tr>
+</table>
+<div>
+    <!--<div class="row" ng-if="category">
+      <div class="col-sm-10 alert alert-success">
+        Category Type predicted by MLaaS is <kbd>{{category}}</kbd>
+      </div>
+    </div>-->
+	<div class="row">
+      <div class="col-sm-5">
+	    <input type="text" class="form-control" placeholder="Input the Test data to classify" 
+	      ng-model="texttoclassify" ng-keypress="($event.which === 13)?testClassify():0">
+	  </div>
+      <div class="col-sm-5">
+            <input type="submit" class="btn btn-primary" value="Predict" ng-click="testClassify()"/>
+        </div>
+	</div>
+	<div class="panel panel-primary top-buffer" ng-if="category">
+      <div class="panel-heading">Category Type predicted by MLaaS is</div>
+      <div class="panel-body"><kbd>{{category}}</kbd></div>
+    </div>
+</div>
