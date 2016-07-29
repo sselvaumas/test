@@ -1,0 +1,14 @@
+<table class="table modeltable">
+    <tr>
+        <td colspan="2"><span class="lead">All Models</span>
+        <a ui-sref="newModel" class="btn-success btn nodecoration">Add Model</a></td>
+    </tr>
+    <tr ng-repeat="model in models">
+        <td>{{model.name}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="editModel({id:model._id})">Edit</a>
+            <a class="btn btn-info" ui-sref="testModel({id:model._id})">Test</a>
+            <!-- <a class="btn btn-danger" ng-click="deleteModel({id:model._id})">Delete</a> -->
+        </td>
+    </tr>
+</table>
