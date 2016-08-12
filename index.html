@@ -25,52 +25,97 @@
   <body ng-app="starter">
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Virtual Compere</h1>
+        <h1 class="title">CCL Virtual Anchor Beta</h1>
       </ion-header-bar>
       <ion-content ng-controller="ExampleController">
+      	 <div class="list list-inset">
+          <label class="item item-input">
+            <i class="icon ion-speakerphone placeholder-icon"></i>
+            <input type="text" placeholder="Let me speak..." ng-model="data.speechText">
+          </label>
+        </div>
+        <button class="button button-full button-positive" ng-click="speakText()">
+          Speak!
+        </button>
+ 
+        <button class="button button-full button-positive" ng-click="record()">
+          Record
+        </button>
+        <div class="card">
+          <div class="item item-text-wrap">
+            {{recognizedText}}
+          </div>
+        </div>
+		<div class = "row">
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('welcome.mp3')">1</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('Greeting.mp3')">2</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('AskExcitement.mp3')">3</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('ShowCCLInfo.mp3')">4</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('ShowCCLStatistics.mp3')">5</button>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('ShowTeamFour.mp3')">6</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('ShowTeamFive.mp3')">7</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('ShowTeamSix.mp3')">8</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('ShowTeamSeven.mp3')">9</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetBestBatsman.mp3')">10</button>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetBestBowler.mp3')">11</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetManOfSeries.mp3')">12</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetCommittee.mp3')">13</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('AskMovieMessage.mp3')">14</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetSecondRunnerUp.mp3')">15</button>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetFinals1.mp3')">16a</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('GetFinals2.mp3')">16b</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('Thanks.mp3')">17</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('Help.mp3')">18</button>
+			</div>
+			<div class = "col">
+				<button class="button button-block button-positive" ng-click="play('SignOffMessage.mp3')">19</button>
+			</div>
+		</div>
 		<ion-list>
 			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GreetMessage.mp3')">Greeting Message</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('ExpressThanks.mp3')">Express Thanks</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('ShowCCLInfo.mp3')">Show CCL Info</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('ShowCCLStatistics.mp3')">Show Statistics</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GetMiddleSetOfMOM.mp3')">Middle Set of Awards</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GetBestBatsman.mp3')">BestBatsman</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GetBestBowler.mp3')">Best Bowler</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GetManOfSeries.mp3')">Man Of the Series</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GetSecondRunnerUp.mp3')">Second Runner Up</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('GetFinals.mp3')">Final</button>
-				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
-			</ion-item>
-			<ion-item>
-				<button class="button button-block button-positive" ng-click="play('SignOffMessage.mp3')">Sign-Off Message</button>
 				<button class="button button-block button-assertive" ng-click="stop()">Stop</button>
 			</ion-item>
 		</ion-list>
